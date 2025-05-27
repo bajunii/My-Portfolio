@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import  resume from  './assets/resume.pdf';
+import { FaGithub, FaLinkedinIn, FaTwitter, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import './App.css';
 
 // Types
@@ -47,6 +48,15 @@ const projects: Project[] = [
     githubLink: 'https://github.com/bajunii/bajunii.github.io',
     liveLink: 'https://bajunii.github.io',
     image: 'src/assets/portfolio.png'
+  },
+  {
+    id: 3,
+    name: 'Swahilipot Hub Foundation',
+    description: 'A full-stack application for Swahilipot Hub Foundation, featuring user registration, event management, and donation tracking.',
+    technologies: ['React','Tailwind CSS', 'Typescript', 'Vite'],
+    githubLink: 'https://github.com/mikesplore/swahilipot-hub-foundation',
+    liveLink: 'https://www.swahilipothub.co.ke/',
+    image: 'src/assets/swahilipot.png'
   },
 ];
 const education: Education[] = [
@@ -366,28 +376,28 @@ const App = () => {
               
               <ul className="contact-details">
                 <li>
-                  <i className="fas fa-envelope"></i>
+                  <FaEnvelope />
                   <span>haithamomar520@gmail.com</span>
                 </li>
                 <li>
-                  <i className="fas fa-phone"></i>
+                  <FaPhone />
                   <span>+254 (794) 320-563</span>
                 </li>
                 <li>
-                  <i className="fas fa-map-marker-alt"></i>
+                  <FaMapMarkerAlt />
                   <span>Mombasa, Kenya</span>
                 </li>
               </ul>
               
               <div className="social-links">
                 <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-github"></i>
+                  <FaGithub />
                 </a>
                 <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-linkedin-in"></i>
+                  <FaLinkedinIn />
                 </a>
                 <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer">
-                  <i className="fab fa-twitter"></i>
+                  <FaTwitter />
                 </a>
               </div>
             </div>
