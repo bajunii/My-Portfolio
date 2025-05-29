@@ -38,7 +38,7 @@ const projects: Project[] = [
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
     githubLink: 'https://github.com/bajunii/fitflow',
     liveLink: 'https://fitflow-demo.com',
-    image: 'src/assets/fitness.png.jpeg'
+    image: './fitness.png.jpeg'
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     githubLink: 'https://github.com/bajunii/bajunii.github.io',
     liveLink: 'https://bajunii.github.io',
-    image: 'src/assets/portfolio.png'
+    image: './portfolio.png'
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const projects: Project[] = [
     technologies: ['React','Tailwind CSS', 'Typescript', 'Vite'],
     githubLink: 'https://github.com/mikesplore/swahilipot-hub-foundation',
     liveLink: 'https://www.swahilipothub.co.ke/',
-    image: 'src/assets/swahilipot.png'
+    image: './swahilipot.png'
   },
 ];
 const education: Education[] = [
@@ -215,7 +215,7 @@ const App = () => {
           </div>
           <div className="hero-image">
             <img 
-            src='/src/assets/about.jpg'
+            src='./about.jpg'
               alt="Profile Photo" 
               className="profile-photo"
             />
@@ -246,7 +246,7 @@ const App = () => {
             </div>
             <div className="about-image">
               <img 
-               src='src/assets/haitham.jpg'
+               src='./assets/haitham.jpg'
                 alt="About me illustration" 
               />
             </div>
@@ -377,15 +377,15 @@ const App = () => {
               <ul className="contact-details">
                 <li>
                   <FaEnvelope />
-                  <span>haithamomar520@gmail.com</span>
+                  <span> haithamomar520@gmail.com</span>
                 </li>
                 <li>
                   <FaPhone />
-                  <span>+254 (794) 320-563</span>
+                  <span> +254 (794) 320-563</span>
                 </li>
                 <li>
                   <FaMapMarkerAlt />
-                  <span>Mombasa, Kenya</span>
+                  <span> Mombasa, Kenya</span>
                 </li>
               </ul>
               
