@@ -38,7 +38,7 @@ const projects: Project[] = [
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
     githubLink: 'https://github.com/bajunii/fitflow',
     liveLink: 'https://fitflow-demo.com',
-    image: 'src/assets/fitness.png.jpeg'
+    image: 'src/assets/fitness.jpeg'
   },
   {
     id: 2,
@@ -215,7 +215,7 @@ const App = () => {
           </div>
           <div className="hero-image">
             <img 
-            src='src/assets/about.jpg'
+            src='src\assets\about.jpg'
               alt="Profile Photo" 
               className="profile-photo"
             />
@@ -246,7 +246,7 @@ const App = () => {
             </div>
             <div className="about-image">
               <img 
-               src='src/assets/haitham.jpg'
+               src='src\assets\haitham.jpg'
                 alt="About me illustration" 
               />
             </div>
