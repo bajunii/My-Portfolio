@@ -45,14 +45,14 @@ const projects: Project[] = [
     name: 'Portfolio Website',
     description: 'A personal portfolio website showcasing projects, skills, and contact information.',
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
-    githubLink: 'https://github.com/bajunii/bajunii.github.io',
-    liveLink: 'https://bajunii.github.io',
+    githubLink: 'https://github.com/bajunii/My-Portfolio',
+    liveLink: 'https://my-portfolio-khaki-seven-67.vercel.app/',
     image: 'src/assets/portfolio.png'
   },
   {
     id: 3,
     name: 'Swahilipot Hub Foundation',
-    description: 'A full-stack application for Swahilipot Hub Foundation, featuring user registration, event management, and Youth Engagement Programs.',
+    description: 'Swahilipot Hub Foundation is dedicated to nurturing youth talent through technology, arts, and entrepreneurship in the heart of East Africa.',
     technologies: ['React','Tailwind CSS', 'Typescript', 'Vite'],
     githubLink: 'https://github.com/mikesplore/swahilipot-hub-foundation',
     liveLink: 'https://www.swahilipothub.co.ke/',
