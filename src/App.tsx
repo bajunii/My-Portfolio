@@ -38,7 +38,7 @@ const projects: Project[] = [
     technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
     githubLink: 'https://github.com/bajunii/fitflow',
     liveLink: 'https://fitflow-demo.com',
-    image: './fitness.png.jpeg'
+    image: 'src/assets/fitness.png.jpeg'
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const projects: Project[] = [
     technologies: ['React', 'TypeScript', 'Tailwind CSS'],
     githubLink: 'https://github.com/bajunii/bajunii.github.io',
     liveLink: 'https://bajunii.github.io',
-    image: './portfolio.png'
+    image: 'src/assets/portfolio.png'
   },
   {
     id: 3,
@@ -56,7 +56,7 @@ const projects: Project[] = [
     technologies: ['React','Tailwind CSS', 'Typescript', 'Vite'],
     githubLink: 'https://github.com/mikesplore/swahilipot-hub-foundation',
     liveLink: 'https://www.swahilipothub.co.ke/',
-    image: './swahilipot.png'
+    image: 'src/assets/swahilipot.png'
   },
 ];
 const education: Education[] = [
@@ -215,7 +215,7 @@ const App = () => {
           </div>
           <div className="hero-image">
             <img 
-            src='./about.jpg'
+            src='src/assets/about.jpg'
               alt="Profile Photo" 
               className="profile-photo"
             />
@@ -246,7 +246,7 @@ const App = () => {
             </div>
             <div className="about-image">
               <img 
-               src='./assets/haitham.jpg'
+               src='src/assets/haitham.jpg'
                 alt="About me illustration" 
               />
             </div>
