@@ -52,7 +52,7 @@ const projects: Project[] = [
   {
     id: 3,
     name: 'Swahilipot Hub Foundation',
-    description: 'A full-stack application for Swahilipot Hub Foundation, featuring user registration, event management, and donation tracking.',
+    description: 'A full-stack application for Swahilipot Hub Foundation, featuring user registration, event management, and Youth Engagement Programs.',
     technologies: ['React','Tailwind CSS', 'Typescript', 'Vite'],
     githubLink: 'https://github.com/mikesplore/swahilipot-hub-foundation',
     liveLink: 'https://www.swahilipothub.co.ke/',
