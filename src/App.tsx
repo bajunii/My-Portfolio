@@ -58,6 +58,15 @@ const projects: Project[] = [
     liveLink: 'https://www.swahilipothub.co.ke/',
     image: '/swahilipot.png'
   },
+  {
+    id: 4,
+    name: 'Team Brothers Website',
+    description: 'A frontend platform with product listings, Event Booking, shopping cart, and payment integration.',
+    technologies: ['React', 'CSS', 'Vite', 'Paystack API', 'TypeScript', 'EmailJS'],
+    githubLink: 'https://github.com/bajunii/Team-Brothers',
+    liveLink: 'https://team-brothers.vercel.app/',
+    image: '/Team-brothers.png'
+  },
 ];
 const education: Education[] = [
   {
@@ -87,7 +96,9 @@ const skills: Skill[] = [
   { name: 'Communication', level: 90, category: 'soft' },
   { name: 'Teamwork', level: 85, category: 'soft' },
   { name: 'Problem Solving', level: 95, category: 'soft' },
-  { name: 'Time Management', level: 80, category: 'soft' }
+  { name: 'Time Management', level: 80, category: 'soft' },
+  {name: 'Django', level: 50, category: 'technical' },
+  { name: 'Git', level: 70, category: 'technical' }
 ];
 
 const socialLinks = {
