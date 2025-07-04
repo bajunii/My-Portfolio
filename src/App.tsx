@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import  resume from  './assets/resume.pdf';
 import { FaGithub, FaLinkedinIn, FaTwitter, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './App.css';
 
 // Types
@@ -13,7 +14,13 @@ type Project = {
   liveLink?: string;
   image: string;
 };
-
+type Experience = {
+  id: number;
+  title: string;
+  company: string;
+  duration: string;
+  description: string;
+};
 type Education = {
   id: number;
   institution: string;
@@ -32,19 +39,10 @@ type Skill = {
 // Data
 const projects: Project[] = [
   {
-    id: 1,
-    name: 'Fitness App',
-    description: 'A full-stack fitness application with user authentication, workout progress, and meal recommendation.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
-    githubLink: 'https://github.com/bajunii/fitflow',
-    liveLink: 'https://fitflow-demo.com',
-    image: '/fitness.jpeg'
-  },
-  {
     id: 2,
     name: 'Portfolio Website',
     description: 'A personal portfolio website showcasing projects, skills, and contact information.',
-    technologies: ['React', 'TypeScript', 'Tailwind CSS'],
+    technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'EmailJS'],
     githubLink: 'https://github.com/bajunii/My-Portfolio',
     liveLink: 'https://my-portfolio-khaki-seven-67.vercel.app/',
     image: '/portfolio.png'
@@ -67,6 +65,15 @@ const projects: Project[] = [
     liveLink: 'https://team-brothers.vercel.app/',
     image: '/Team-brothers.png'
   },
+];
+const Experience: Experience[]= [
+  {
+    id: 2,
+    title: 'Software Engineering Intern',
+    company: 'Swahilipot Hub Foundation',
+    duration: 'May 2025 - August 2025',
+    description: 'Assisted in building responsive websites and web applications. Gained experience in frontend and backend development using various technologies such as React in frontend and Django in backend.'
+  }
 ];
 const education: Education[] = [
   {
@@ -103,7 +110,7 @@ const skills: Skill[] = [
 
 const socialLinks = {
   github: 'https://github.com/bajunii',
-  linkedin: 'https://linkedin.com/in/haitham-omar',
+  linkedin: 'https://linkedin.com/in/haithamomar',
   twitter: 'https://twitter.com/HaithamOma56317'
 };
 
@@ -137,13 +144,26 @@ const App = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, you would send the form data to a server
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-    
-    // Reset submission status after 3 seconds
-    setTimeout(() => setIsSubmitted(false), 3000);
+
+    emailjs.send(
+      'service_ec9vd6d',      // Replace with your EmailJS service ID
+      'template_slx7a4c',     // Replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+      },
+      'BUbFTx8yrfr9UaX0r'       // Replace with your EmailJS public key
+    )
+    .then(() => {
+      setIsSubmitted(true);
+      setFormData({ name: '', email: '', message: '' });
+      setTimeout(() => setIsSubmitted(false), 3000);
+    })
+    .catch((error) => {
+      alert('Failed to send message. Please try again.');
+      console.error('EmailJS error:', error);
+    });
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -197,6 +217,11 @@ const App = () => {
                 className={activeSection === 'projects' ? 'active' : ''}
                 onClick={(e) => { e.preventDefault(); scrollToSection('projects'); }}
               >Projects</a></li>
+              <li><a 
+                href="#experience" 
+                className={activeSection === 'experience' ? 'active' : ''}
+                onClick={(e) => { e.preventDefault(); scrollToSection('experience'); }}
+              >Experience</a></li>
               <li><a 
                 href="#education" 
                 className={activeSection === 'education' ? 'active' : ''}
@@ -342,6 +367,25 @@ const App = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      {/* Experience Section */}
+      <section id="experience" className="section experience">
+        <div className="container">
+          <h2 className="section-title">My <span className="highlight">Experience</span></h2>
+          
+          <div className="experience-timeline">
+        {Experience.map(exp => (
+          <div key={exp.id} className="timeline-item">
+            <div className="timeline-date">{exp.duration}</div>
+            <div className="timeline-content">
+          <h3>{exp.title}</h3>
+          <p className="company">{exp.company}</p>
+          <p className="description">{exp.description}</p>
+            </div>
+          </div>
+        ))}
           </div>
         </div>
       </section>
