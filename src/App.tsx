@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import  resume from  './assets/resume.pdf';
+// import  certificate from  './assets/certificate.pdf';
 import { FaGithub, FaLinkedinIn, FaTwitter, FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import './App.css';
@@ -65,6 +66,18 @@ const projects: Project[] = [
     liveLink: 'https://team-brothers.vercel.app/',
     image: '/Team-brothers.png'
   },
+  {
+    id: 5,
+    name: 'Renova',
+    description: 'A garbage collection and recycling project management application.',
+    technologies: ['Flutter', 'Dart', 'CSS'],
+    githubLink: 'https://github.com/bajunii/renova',
+    liveLink: '',
+    image: ''
+  },
+
+
+
 ];
 const Experience: Experience[]= [
   {
@@ -86,26 +99,27 @@ const education: Education[] = [
   },
   {
     id: 2,
-    institution: 'Online Coding Bootcamp',
+    institution: 'PowerLearnProject Academy (PLP Africa)',
     degree: 'Certification',
-    field: 'Full Stack Development',
-    year: '2023 - 2024',
-    courses: ['JavaScript', 'React', 'MongoDB']
+    field: 'Software Development (Full Stack)/Mobile Development',
+    year: 'May 2025 - November 2025',
+    courses: ['JavaScript', 'React', 'MySQL', 'Node.js', 'Django', 'HTML/CSS', 'Flutter/Dart', 'Git',]
   }
 ];
 
 const skills: Skill[] = [
-  { name: 'JavaScript', level:65, category: 'technical' },
-  { name: 'React', level: 55, category: 'technical' },
+  { name: 'JavaScript', level:75, category: 'technical' },
+  { name: 'React', level: 85, category: 'technical' },
   { name: 'TypeScript', level: 60, category: 'technical' },
-  { name: 'Node.js', level: 35, category: 'technical' },
+  { name: 'Node.js', level: 65, category: 'technical' },
   { name: 'HTML/CSS', level: 95, category: 'technical' },
   { name: 'Communication', level: 90, category: 'soft' },
   { name: 'Teamwork', level: 85, category: 'soft' },
   { name: 'Problem Solving', level: 95, category: 'soft' },
   { name: 'Time Management', level: 80, category: 'soft' },
-  {name: 'Django', level: 50, category: 'technical' },
-  { name: 'Git', level: 70, category: 'technical' }
+  {name: 'Django', level: 75, category: 'technical' },
+  { name: 'Git', level: 70, category: 'technical' },
+  { name: 'Flutter/Dart', level: 70, category: 'technical' }
 ];
 
 const socialLinks = {
@@ -247,11 +261,12 @@ const App = () => {
             <div className="hero-buttons">
               <button className="btn primary" onClick={() => scrollToSection('projects')}>View My Work</button>
               <a href={resume} className="btn secondary"download="resume.pdf">Download Resume</a>
+              {/* <a href={certificate} className="btn secondary"download="certificate.pdf">Download Certificate</a> */}
             </div>
           </div>
           <div className="hero-image">
             <img 
-            src='/about.jpg'
+            src='\Profile.jpg'
               alt="Profile Photo" 
               className="profile-photo"
             />
@@ -267,12 +282,12 @@ const App = () => {
           <div className="about-content">
             <div className="about-text">
               <p>
-                I'm a passionate full-stack developer with 2 years of experience building web applications. 
+                I'm a passionate full-stack developer with 3 years of experience building web applications. 
                 My journey in tech started when I built my first website at 19, and I've been hooked ever since.
               </p>
               <p>
                 I specialize in JavaScript technologies across the stack, with expertise in React for frontend 
-                and Django for backend development. I love solving complex problems and creating intuitive, 
+                and Django for backend development and mobile applications development using Flutter and Dart. I love solving complex problems and creating intuitive, 
                 user-friendly interfaces.
               </p>
               <p>
